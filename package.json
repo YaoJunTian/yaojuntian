@@ -1,0 +1,43 @@
+{
+  "name": "yaojuntian",
+  "version": "1.0.0",
+  "description": "yaojuntian.com",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --config=config/webpack.config.js",
+    "dev:server": "webpack-dev-server --mode development --config=config/webpack.config.js",
+    "prod": "webpack --mode production --config=config/webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@192.168.3.25:/git-warehouse/YAOJUNTIAN/yaojuntian.git"
+  },
+  "author": "yaojuntian",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.0",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^4.0.0-beta.11",
+    "lodash-es": "^4.17.15",
+    "mini-css-extract-plugin": "^0.9.0",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0",
+    "rsync": "^0.6.1",
+    "set-iterm2-badge": "^0.0.4",
+    "shelljs": "^0.8.3",
+    "style-loader": "^1.1.1",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-deep-scope-plugin": "^1.6.2",
+    "webpack-dev-server": "^3.10.1",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "ora": "^4.0.3",
+    "yargs": "^15.0.2"
+  }
+}
