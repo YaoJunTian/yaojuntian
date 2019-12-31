@@ -12,3 +12,14 @@ steps:
   image: node:lts-alpine
   commands:
    - npm run prod
+- name: rsync
+  image: drillster/drone-rsync
+  environment:
+    RSYNC_KEY:
+      from_secret: yaojuntian_key
+  settings:
+    hosts:
+      - 127.0.0.1
+    source: dist/*
+    target: ~/projects/html
+    secrets: [ yaojuntian_key ]
