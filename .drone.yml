@@ -2,7 +2,6 @@
 kind: pipeline
 type: docker
 name: yaojuntian-web
-
 steps:
 - name: install
   image: node:lts-alpine
@@ -19,7 +18,12 @@ steps:
       from_secret: yaojuntian_key
   settings:
     hosts:
-      - 127.0.0.1
+      - 123.206.83.64
     source: dist/*
     target: ~/projects/html
     secrets: [ yaojuntian_key ]
+- name: inform
+  image: curlimages/curl:7.67.0
+  commands:
+   - |
+    'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b0d94e6f-208f-43e5-afac-8f135dd34676' -H 'Content-Type: application/json' -d '{"msgtype": "text","text": {"content": "构建成功"}}'`)
