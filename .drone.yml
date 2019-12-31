@@ -20,7 +20,7 @@ steps:
     hosts:
       - 123.206.83.64
     source: dist/*
-    target: ~/projects/html
+    target: /projects/html
     secrets: [ yaojuntian_key ]
 - name: inform
   image: curlimages/curl:7.67.0
