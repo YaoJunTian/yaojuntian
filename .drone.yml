@@ -26,4 +26,4 @@ steps:
   image: curlimages/curl:7.67.0
   commands:
    - |
-     curl 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b0d94e6f-208f-43e5-afac-8f135dd34676' -H 'Content-Type: application/json' -d '{"msgtype": "text","text": {"content": "${message}"}}'
+     curl 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=b0d94e6f-208f-43e5-afac-8f135dd34676' -H 'Content-Type: application/json' -d '{"msgtype": "text","text": {"content": "部署完成"}}'
